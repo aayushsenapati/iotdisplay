@@ -1,6 +1,44 @@
+
+
+
 .App {
   text-align: center;
 }
+
+.appDiv {
+  /* background-color: #282c34; */
+  text-align: center;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+.inputDiv {
+  /* scale: 2; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  /* width: 100vw; */
+}
+
+.inputDiv div{
+  margin: 10px;
+}
+
+
+div.form{
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  margin-top: 30px;
+  justify-content: center;
+  background-color: hsl(220, 0%, 4%);
+  border-radius: 10px;
+  width: 80vw;
+}
+
 
 .App-logo {
   height: 40vmin;
