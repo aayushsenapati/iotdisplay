@@ -49,7 +49,7 @@ function App() {
     };
 
     return (
-        <ThemeProvider theme={darkTheme}>
+        <ThemeProvider theme={darkTheme} id='app'>
             <div className="form">
                 <div className="inputDiv">
                     <CssBaseline/>
@@ -60,7 +60,7 @@ function App() {
                         <TextField InputLabelProps={{ shrink:'true' }} id="outlined-basic" label="PRN" variant="outlined" value={message} onChange={handleMessageChange}/>
                         {/* <input id="message" type="text" value={message} onChange={handleMessageChange} /> */}
                 </div>
-                <Button  onClick={handleSubmit}>Send</Button>
+                <Button variant="outlined" id='send' onClick={handleSubmit}>Send</Button>
             </div>
         </ThemeProvider>
     );

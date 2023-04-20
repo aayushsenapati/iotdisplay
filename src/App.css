@@ -3,6 +3,7 @@
 
 .App {
   text-align: center;
+  scale:2;
 }
 
 .appDiv {
@@ -37,6 +38,17 @@ div.form{
   background-color: hsl(220, 0%, 4%);
   border-radius: 10px;
   width: 80vw;
+}
+
+
+#send{
+  width: 100px;
+  height: 40px;
+  margin:auto;
+  margin-bottom: 150px;
+
+  
+  cursor: pointer;
 }
 
 
