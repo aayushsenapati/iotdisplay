@@ -28,6 +28,12 @@ function App() {
         setMessage(event.target.value);
     };
 
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleSubmit();
+        }
+    };
+
     const handleSubmit = () => {
         if (!ipAddress) {
             axios.get(`http://${ipAddress}`)
@@ -53,12 +59,8 @@ function App() {
             <div className="form">
                 <div className="inputDiv">
                     <CssBaseline/>
-                        {/* <label htmlFor="ip-address">IP Address:</label> */}
                         <TextField InputLabelProps={{ shrink:'true' }} id="outlined-basic" label="IP Address" variant="outlined" value={ipAddress} onChange={handleIpAddressChange} />
-                        {/* <input id="ip-address" type="text" value={ipAddress} onChange={handleIpAddressChange} /> */}
-                        {/* <label htmlFor="message">Message:</label> */}
-                        <TextField InputLabelProps={{ shrink:'true' }} id="outlined-basic" label="PRN" variant="outlined" value={message} onChange={handleMessageChange}/>
-                        {/* <input id="message" type="text" value={message} onChange={handleMessageChange} /> */}
+                        <TextField InputLabelProps={{ shrink:'true' }} id="outlined-basic" type='password' label="PRN" variant="outlined" value={message} onChange={handleMessageChange} onKeyPress={handleKeyPress}/>
                 </div>
                 <Button variant="outlined" id='send' onClick={handleSubmit}>Send</Button>
             </div>
